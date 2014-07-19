@@ -34,6 +34,16 @@
     return self.origin.y;
 }
 
+- (CGFloat)right
+{
+    return self.x + self.width;
+}
+
+- (CGFloat)bottom
+{
+    return self.y + self.height;
+}
+
 
 - (CGSize)size
 {
@@ -57,12 +67,12 @@
     self.frame = (CGRect){origin, self.size};
 }
 
-- (void)setOriginX:(CGFloat)x
+- (void)setX:(CGFloat)x
 {
     [self setOrigin:CGPointMake(x, self.y)];
 }
 
-- (void)setOriginY:(CGFloat)y
+- (void)setY:(CGFloat)y
 {
     [self setOrigin:CGPointMake(self.x, y)];
 }
@@ -74,12 +84,12 @@
     self.frame = (CGRect){self.origin, size};
 }
 
-- (void)setSizeWidth:(CGFloat)width
+- (void)setWidth:(CGFloat)width
 {
     [self setSize:CGSizeMake(width, self.height)];
 }
 
-- (void)setSizeHeight:(CGFloat)height
+- (void)setHeight:(CGFloat)height
 {
     [self setSize:CGSizeMake(self.width, height)];
 }
